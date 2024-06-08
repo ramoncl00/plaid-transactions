@@ -4,6 +4,7 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from api.infrastructure.plaid.plaid_client import PlaidClient
 from rest_framework.response import Response
 
+
 class LinkTokenView(APIView):
     permission_classes = [IsAuthenticated]
     authentication_classes = [JWTAuthentication]

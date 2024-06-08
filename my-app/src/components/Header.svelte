@@ -1,11 +1,10 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
 	import { isAuthenticated } from '../services/authentication';
 
 	const logout = () => {
-		localStorage.removeItem("bearer")
+		localStorage.clear()
+		sessionStorage.clear()
 		location.href = "/"
 	}
 
@@ -40,7 +39,7 @@
 	{/if}
 
 	<div class="corner">
-		
+
 	</div>
 </header>
 

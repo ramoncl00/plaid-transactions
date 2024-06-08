@@ -37,3 +37,12 @@ export const refreshToken = async () => {
         }
     }
 }
+
+export const isAuthenticatedInPlaid = () => {
+    if(browser) {
+        let token = localStorage.getItem("plaid_key")
+        return token != null
+    }
+
+    return false
+}
